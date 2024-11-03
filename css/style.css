@@ -30,16 +30,21 @@ header .logo img{
     width: 236px;
 }
 
-header nav{
+nav.menu-mobile{
+    float: right;
+    display: none;
+}
+
+header nav.menu-desktop{
     float: right;
 }
 
-header nav ul{
-    padding: 8px0;
+header nav.menu-desktop ul{
+    padding: 8px;
     list-style-type: none;
 }
 
-header nav ul li{
+header nav.menu-desktop ul li{
     float: left;
     font-size: 14px;
     padding: 0 20px;
@@ -64,7 +69,7 @@ header ul li a{
     width: 100%;
     padding-top: 100%;
     background-color: #ccc;
-    border: 1px solid white;
+    border: 5px solid white;
     background-image: url('');
 }
 
@@ -117,4 +122,137 @@ section.servicos > .container .box-servico:nth-of-type(3){
     width: 30%;
     padding: 30px 2%;
     background-color: #576975;
+}
+
+section.perfil-container{
+    padding: 40px 0;
+}
+
+section.perfil-container .container{
+    max-width: 800px;
+}
+
+section.perfil-container .perfil-wraper{
+    padding-top: 60%;
+    position: relative;
+}
+
+section.perfil-container .perfil-wraper2{
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+section.perfil-container .img-perfil{
+    width: 40%;
+    height: 100%;
+    background-image: url('../images/img_perfil.png');
+    background-size: 100% 100%;
+}
+
+section.perfil-container .texto-perfil{
+    width: 60%;
+    padding: 0 30px;
+}
+
+section.perfil-container .texto-perfil h2{
+    color: #698293;
+    font-size: 18px;
+}
+
+section.perfil-container .texto-perfil p{
+    color: #4B4B4B;
+    font-size: 14px;
+    margin-top: 8px;
+}
+
+@media screen and (max-width: 768px){
+    nav.menu-desktop{
+        display: none;
+    }
+
+    nav.menu-mobile{
+        display: block;
+    }
+
+    section.servicos > .container{
+        /*
+        max-width: 800px;
+        display: flex;
+        align-items: center;
+        position: relative;
+        top: -30px;
+        text-align: center;
+        */
+        flex-direction: column;
+    }
+
+    section.servicos > .container .box-servico:nth-of-type(1){
+        width: 90%;
+        max-width: 350px;
+        padding: 30px 2%;
+    }
+    
+    section.servicos > .container .box-servico:nth-of-type(2){
+        width: 90%;
+        max-width: 380px;
+        padding: 40px 2%;
+        background-image: none;
+    }
+    
+    section.servicos > .container .box-servico:nth-of-type(3){
+        width: 90%;
+        max-width: 350px;
+        padding: 30px 2%;
+    }
+    
+    section.perfil-container .perfil-wraper2{
+        /*
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        */
+        text-align: center;
+        display: inline-block;
+        /*flex-direction: column;*/
+    }
+
+    section.perfil-container .img-perfil{
+        width: 50%;
+        padding-top: 70%;
+        display: inline-block;
+        height: auto;
+        /*
+        background-image: url('../images/img_perfil.png');
+        background-size: 100% 100%;
+        */
+    }
+    
+    section.perfil-container .texto-perfil{
+        display: inline-block;
+        text-align: justify;
+        width: 100%;
+        padding: 0 30px;
+    }
+}
+
+@media screen and (max-width: 580px){
+    section.perfil-container .img-perfil{
+        width: 80%;
+        padding-top: 110%;
+    }
+}
+
+@media screen and (max-width: 480px){
+    header .logo img{
+        width: 200px;
+    }
 }
