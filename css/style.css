@@ -250,6 +250,47 @@ section.tratamentos > .container{
     color: #B4B4B4;
 }
 
+section.depoimentos > h2{
+    color: #698293;
+    text-align: center;
+    font-size: 18px;
+}
+
+section.depoimentos > .container{
+    padding: 40px 0;
+    max-width: 400px;
+}
+
+section.depoimentos .depoimento-single{
+    text-align: center;
+    width: 100%;
+}
+
+.depoimento-single quote{
+    font-size: 15px;
+    color: #B4B4B4;
+    padding: 0 2%;
+}
+
+.depoimento-single .nome-depoimento{
+    padding: 19px 0;
+}
+
+.nome-depoimento img{
+    width: 32px;
+    height: 32px;
+    border-radius: 16px;
+}
+
+.nome-depoimento span{
+    position: relative;
+    top: 4px;
+    font-size: 13px;
+    color: #B4B4B4;
+    display: inline-block;
+    vertical-align: top;
+}
+
 @media screen and (max-width: 768px){
     nav.menu-desktop{
         display: none;
